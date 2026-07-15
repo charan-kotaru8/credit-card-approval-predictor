@@ -1,0 +1,94 @@
+[
+  {
+    "label": "Approved",
+    "prob_approved": 1.0,
+    "prob_rejected": 0.0,
+    "input": {
+      "CNT_CHILDREN": 1.0,
+      "AMT_INCOME_TOTAL": 200000.0,
+      "AGE_YEARS": 30.0,
+      "EMPLOYED_YEARS": 10.0,
+      "CNT_FAM_MEMBERS": 2.0,
+      "FLAG_WORK_PHONE": 1,
+      "FLAG_PHONE": 1,
+      "FLAG_EMAIL": 1,
+      "CODE_GENDER_BIN": 0,
+      "FLAG_OWN_CAR_BIN": 1,
+      "FLAG_OWN_REALTY_BIN": 1,
+      "NAME_INCOME_TYPE": "State servant",
+      "NAME_EDUCATION_TYPE": "Higher education",
+      "NAME_FAMILY_STATUS": "Married",
+      "NAME_HOUSING_TYPE": "Office apartment",
+      "OCCUPATION_TYPE": "IT staff"
+    }
+  },
+  {
+    "label": "Rejected",
+    "prob_approved": 0.0,
+    "prob_rejected": 1.0,
+    "input": {
+      "CNT_CHILDREN": 0.0,
+      "AMT_INCOME_TOTAL": 500000.0,
+      "AGE_YEARS": 30.0,
+      "EMPLOYED_YEARS": 10.0,
+      "CNT_FAM_MEMBERS": 1.0,
+      "FLAG_WORK_PHONE": 0,
+      "FLAG_PHONE": 0,
+      "FLAG_EMAIL": 0,
+      "CODE_GENDER_BIN": 0,
+      "FLAG_OWN_CAR_BIN": 0,
+      "FLAG_OWN_REALTY_BIN": 0,
+      "NAME_INCOME_TYPE": "State servant",
+      "NAME_EDUCATION_TYPE": "Higher education",
+      "NAME_FAMILY_STATUS": "Married",
+      "NAME_HOUSING_TYPE": "Rented apartment",
+      "OCCUPATION_TYPE": "IT staff"
+    }
+  },
+  {
+    "label": "Rejected",
+    "prob_approved": 0.0,
+    "prob_rejected": 1.0,
+    "input": {
+      "CNT_CHILDREN": 0.0,
+      "AMT_INCOME_TOTAL": 50000.0,
+      "AGE_YEARS": 30.0,
+      "EMPLOYED_YEARS": 10.0,
+      "CNT_FAM_MEMBERS": 1.0,
+      "FLAG_WORK_PHONE": 0,
+      "FLAG_PHONE": 0,
+      "FLAG_EMAIL": 0,
+      "CODE_GENDER_BIN": 0,
+      "FLAG_OWN_CAR_BIN": 0,
+      "FLAG_OWN_REALTY_BIN": 0,
+      "NAME_INCOME_TYPE": "State servant",
+      "NAME_EDUCATION_TYPE": "Higher education",
+      "NAME_FAMILY_STATUS": "Married",
+      "NAME_HOUSING_TYPE": "Rented apartment",
+      "OCCUPATION_TYPE": "IT staff"
+    }
+  },
+  {
+    "label": "Rejected",
+    "prob_approved": 0.0,
+    "prob_rejected": 1.0,
+    "input": {
+      "CNT_CHILDREN": 1.0,
+      "AMT_INCOME_TOTAL": 50000.0,
+      "AGE_YEARS": 30.0,
+      "EMPLOYED_YEARS": 5.0,
+      "CNT_FAM_MEMBERS": 1.0,
+      "FLAG_WORK_PHONE": 0,
+      "FLAG_PHONE": 0,
+      "FLAG_EMAIL": 0,
+      "CODE_GENDER_BIN": 0,
+      "FLAG_OWN_CAR_BIN": 0,
+      "FLAG_OWN_REALTY_BIN": 0,
+      "NAME_INCOME_TYPE": "Commercial associate",
+      "NAME_EDUCATION_TYPE": "Academic degree",
+      "NAME_FAMILY_STATUS": "Civil marriage",
+      "NAME_HOUSING_TYPE": "Co-op apartment",
+      "OCCUPATION_TYPE": "Accountants"
+    }
+  }
+]

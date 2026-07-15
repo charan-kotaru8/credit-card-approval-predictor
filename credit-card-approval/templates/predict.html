@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Predict Credit Card Approval</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Applicant Input</h1>
+    <p class="lead">Fill in applicant details. The system will predict <b>Approved</b> or <b>Rejected</b>.</p>
+
+    <form method="POST" action="/predict" class="form">
+      <div class="grid">
+        <label>
+          Children (count)
+          <input name="CNT_CHILDREN" type="number" step="1" value="0" required />
+        </label>
+        <label>
+          Total Monthly Income (approx.)
+          <input name="AMT_INCOME_TOTAL" type="number" step="1" value="0" required />
+        </label>
+        <label>
+          Age (years)
+          <input name="AGE_YEARS" type="number" step="0.1" value="30" required />
+        </label>
+        <label>
+          Employment Duration (years)
+          <input name="EMPLOYED_YEARS" type="number" step="0.1" value="0" required />
+        </label>
+        <label>
+          Family Members (count)
+          <input name="CNT_FAM_MEMBERS" type="number" step="1" value="1" required />
+        </label>
+      </div>
+
+      <div class="grid">
+        <label>
+          Gender (M/F)
+          <select name="CODE_GENDER_BIN">
+            <option value="0">0 (M)</option>
+            <option value="1">1 (F)</option>
+          </select>
+        </label>
+        <label>
+          Owns a Car?
+          <span class="info" title="Whether the applicant owns a car (Yes/No).">i</span>
+          <select name="FLAG_OWN_CAR_BIN">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+        <label>
+          Owns Property?
+          <span class="info" title="Whether the applicant owns real estate/property (Yes/No).">i</span>
+          <select name="FLAG_OWN_REALTY_BIN">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+        <label>
+          Work Phone Available?
+          <span class="info" title="Whether the applicant has a work phone number available.">i</span>
+          <select name="FLAG_WORK_PHONE">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+        <label>
+          Phone Available?
+          <span class="info" title="Whether the applicant has a phone number available.">i</span>
+          <select name="FLAG_PHONE">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+        <label>
+          Has an Email? 
+          <span class="info" title="Whether the applicant provided an email address.">i</span>
+          <select name="FLAG_EMAIL">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+          </select>
+        </label>
+      </div>
+
+      <h3>Applicant Categorical Details</h3>
+      <p class="lead" style="margin-top:-4px">Choose values from the dropdowns.</p>
+      <div class="grid">
+        {% for c in metadata.categorical_features %}
+          <label>
+            {{ c }}
+            <select name="{{ c }}" required>
+              <option value="" disabled selected>Select...</option>
+              {% for opt in metadata.categorical_options[c] %}
+                <option value="{{ opt }}">{{ opt }}</option>
+              {% endfor %}
+            </select>
+          </label>
+        {% endfor %}
+      </div>
+
+      <div class="actions">
+        <button class="btn" type="submit">Predict</button>
+        <a class="btn secondary" href="/">Back</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+

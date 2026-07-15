@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Credit Card Approval Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Credit Card Approval Predictor</h1>
+    <p class="lead">Instantly predict <b>Approved</b> vs <b>Rejected</b> using a risk-aware model focused on catching high-risk (Rejected) applicants.</p>
+
+    <div class="actions">
+      <a class="btn" href="/predict">Start Prediction</a>
+      <a class="btn secondary" href="/history">Prediction History</a>
+    </div>
+
+    <div class="card note">
+      <h3>How it works</h3>
+      <ul>
+        <li>Model was trained on historical records.</li>
+        <li>We focus on performance for the minority <b>Rejected</b> class (low-risk recall/F1 target).</li>
+        <li>Outputs include confidence scores.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+

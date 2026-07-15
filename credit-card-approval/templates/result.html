@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction Result</h1>
+    <p class="lead">Decision confidence from the selected best model.</p>
+
+
+    <div class="card">
+      <h2 class="label {{ 'approved' if label=='Approved' else 'rejected' }}">{{ label }}</h2>
+      <p><b>Confidence (Approved):</b> {{ '%.4f'|format(prob_approved) }}</p>
+      <p><b>Confidence (Rejected):</b> {{ '%.4f'|format(prob_rejected) }}</p>
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="/predict">New Prediction</a>
+      <a class="btn secondary" href="/history">View History</a>
+      <a class="btn secondary" href="/">Home</a>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,76 @@
+{
+  "numeric_features": [
+    "CNT_CHILDREN",
+    "AMT_INCOME_TOTAL",
+    "AGE_YEARS",
+    "EMPLOYED_YEARS",
+    "CNT_FAM_MEMBERS"
+  ],
+  "binary_features": [
+    "CODE_GENDER_BIN",
+    "FLAG_OWN_CAR_BIN",
+    "FLAG_OWN_REALTY_BIN",
+    "FLAG_WORK_PHONE",
+    "FLAG_PHONE",
+    "FLAG_EMAIL"
+  ],
+  "categorical_features": [
+    "NAME_INCOME_TYPE",
+    "NAME_EDUCATION_TYPE",
+    "NAME_FAMILY_STATUS",
+    "NAME_HOUSING_TYPE",
+    "OCCUPATION_TYPE"
+  ],
+  "categorical_options": {
+    "NAME_INCOME_TYPE": [
+      "Commercial associate",
+      "Pensioner",
+      "State servant",
+      "Student",
+      "Working"
+    ],
+    "NAME_EDUCATION_TYPE": [
+      "Academic degree",
+      "Higher education",
+      "Incomplete higher",
+      "Lower secondary",
+      "Secondary / secondary special"
+    ],
+    "NAME_FAMILY_STATUS": [
+      "Civil marriage",
+      "Married",
+      "Separated",
+      "Single / not married",
+      "Widow"
+    ],
+    "NAME_HOUSING_TYPE": [
+      "Co-op apartment",
+      "House / apartment",
+      "Municipal apartment",
+      "Office apartment",
+      "Rented apartment",
+      "With parents"
+    ],
+    "OCCUPATION_TYPE": [
+      "Accountants",
+      "Cleaning staff",
+      "Cooking staff",
+      "Core staff",
+      "Drivers",
+      "HR staff",
+      "High skill tech staff",
+      "IT staff",
+      "Laborers",
+      "Low-skill Laborers",
+      "Managers",
+      "Medicine staff",
+      "Private service staff",
+      "Realty agents",
+      "Sales staff",
+      "Secretaries",
+      "Security staff",
+      "Unknown",
+      "Waiters/barmen staff"
+    ]
+  }
+}

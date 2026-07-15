@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prediction History</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="container">
+    <h1>Prediction History</h1>
+    <p class="lead">Most recent predictions (stored locally on this machine).</p>
+
+    <div class="history">
+      {% if history|length == 0 %}
+        <div class="card note">No predictions yet.</div>
+      {% else %}
+        {% for item in history %}
+          <div class="card">
+            <div class="row">
+              <div>
+                <h2 class="label {{ 'approved' if item.label=='Approved' else 'rejected' }}">{{ item.label }}</h2>
+                <p><b>Approved:</b> {{ '%.4f'|format(item.prob_approved) }}</p>
+                <p><b>Rejected:</b> {{ '%.4f'|format(item.prob_rejected) }}</p>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+
+    <div class="actions">
+      <a class="btn" href="/predict">Predict Again</a>
+      <a class="btn secondary" href="/">Home</a>
+    </div>
+  </div>
+</body>
+</html>
+
